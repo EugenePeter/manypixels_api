@@ -4,13 +4,14 @@
     "description": "unsplash api wrapped in graphql api",
     "author": "Eugene Peter Maestrado",
     "license": "ISC",
-    "main": "index.js",
     "scripts": {
-        "watch": "tsc -w ",
-        "dev": "nodemon src/app.ts",
-        "start": "nodemon dist/app.js"
+        "watch": "tsc -w",
+        "develop": " nodemon /src/app.ts",
+        "start": "nodemon dist/app.js",
+        "build": "tsc"
     },
     "dependencies": {
+        "@types/node-fetch": "^2.5.10",
         "apollo-server-express": "^2.23.0",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
@@ -18,11 +19,13 @@
         "graphql": "^15.5.0",
         "graphql-playground": "^1.3.17",
         "graphql-playground-middleware-express": "^1.7.22",
+        "node-fetch": "^2.6.1",
         "nodemon": "^2.0.7",
         "rethinkdbdash": "^2.3.31",
         "ts-node": "^9.1.1",
         "type-graphql": "^1.1.1",
         "typescript": "^4.2.3",
+        "unsplash-js": "^7.0.13",
         "uuid": "^8.3.2",
         "winston": "^3.3.3"
     },
