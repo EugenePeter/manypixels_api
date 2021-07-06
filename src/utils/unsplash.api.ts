@@ -7,10 +7,6 @@ const unsplash = createApi({
     fetch,
 });
 
-// const browserApi = createApi({
-//     apiUrl: "https://mywebsite.com/unsplash-proxy",
-//     //...other fetch options
-// });
 export const getAllPhotos = async (data: any) => {
     console.log("DATA:", data);
     try {
@@ -18,11 +14,8 @@ export const getAllPhotos = async (data: any) => {
             featured: true,
             count: 10,
         });
-        console.log("type:", typeof result);
-        if (result.errors) return;
         return result.response;
     } catch (error) {
         console.log("FETCH ABORTED", error);
-        return "HAHAHAH";
     }
 };

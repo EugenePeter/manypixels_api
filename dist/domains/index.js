@@ -19,8 +19,6 @@ var initializeApolloServer = function (app) {
         resolvers: [resolvers_1.artist_resolvers],
         context: {
             all_photos: unsplash_api_1.getAllPhotos,
-            test: "heyh",
-            another_Test: "gggggg",
         },
     });
     apolloServer.applyMiddleware({ app: app });

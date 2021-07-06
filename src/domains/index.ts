@@ -4,8 +4,6 @@ import { artist_resolvers } from "./artwork/resolvers";
 import { artist_type_Defs } from "./artwork/typeDefs";
 import { getAllPhotos } from "../utils/unsplash.api";
 
-// const expressPlayground = require("graphql-playground-middleware-express").default;
-
 const defaultTypeDefs = gql`
     type Query {
         _empty: String
@@ -19,8 +17,6 @@ export const initializeApolloServer = (app: any) => {
         resolvers: [artist_resolvers],
         context: {
             all_photos: getAllPhotos,
-            test: "heyh",
-            another_Test: "gggggg",
         },
     });
 

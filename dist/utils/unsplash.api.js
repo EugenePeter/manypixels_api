@@ -47,10 +47,6 @@ var unsplash = unsplash_js_1.createApi({
     accessKey: ACCESSKEY,
     fetch: node_fetch_1.default,
 });
-// const browserApi = createApi({
-//     apiUrl: "https://mywebsite.com/unsplash-proxy",
-//     //...other fetch options
-// });
 var getAllPhotos = function (data) { return __awaiter(void 0, void 0, void 0, function () {
     var result, error_1;
     return __generator(this, function (_a) {
@@ -66,14 +62,11 @@ var getAllPhotos = function (data) { return __awaiter(void 0, void 0, void 0, fu
                     })];
             case 2:
                 result = _a.sent();
-                console.log("type:", typeof result);
-                if (result.errors)
-                    return [2 /*return*/];
                 return [2 /*return*/, result.response];
             case 3:
                 error_1 = _a.sent();
                 console.log("FETCH ABORTED", error_1);
-                return [2 /*return*/, "HAHAHAH"];
+                return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }
     });
